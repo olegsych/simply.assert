@@ -1,0 +1,13 @@
+﻿# Ignore supporting files created by Visual Studio
+*.*sdf
+*.user
+*.suo
+/ipch
+/.vs
+/packages
+/bin
+/obj
+/TestResults
+
+# Ignore C++ filters because they make projects more complex
+*.filters

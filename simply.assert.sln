@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85735094-AFD5-44F8-92DC-99D4B1D3CC27}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		appveyor.yml = appveyor.yml
+		common.props = common.props
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "src", "src\src.vcxproj", "{328B3C35-755F-4326-A504-443D3A481710}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{2E430331-FF8E-42FE-8165-94062FCE970F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{328B3C35-755F-4326-A504-443D3A481710}.Debug|x64.ActiveCfg = Debug|x64
+		{328B3C35-755F-4326-A504-443D3A481710}.Debug|x64.Build.0 = Debug|x64
+		{328B3C35-755F-4326-A504-443D3A481710}.Debug|x86.ActiveCfg = Debug|Win32
+		{328B3C35-755F-4326-A504-443D3A481710}.Debug|x86.Build.0 = Debug|Win32
+		{328B3C35-755F-4326-A504-443D3A481710}.Release|x64.ActiveCfg = Release|x64
+		{328B3C35-755F-4326-A504-443D3A481710}.Release|x64.Build.0 = Release|x64
+		{328B3C35-755F-4326-A504-443D3A481710}.Release|x86.ActiveCfg = Release|Win32
+		{328B3C35-755F-4326-A504-443D3A481710}.Release|x86.Build.0 = Release|Win32
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Debug|x64.ActiveCfg = Debug|x64
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Debug|x64.Build.0 = Debug|x64
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Debug|x86.ActiveCfg = Debug|Win32
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Debug|x86.Build.0 = Debug|Win32
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Release|x64.ActiveCfg = Release|x64
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Release|x64.Build.0 = Release|x64
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Release|x86.ActiveCfg = Release|Win32
+		{2E430331-FF8E-42FE-8165-94062FCE970F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

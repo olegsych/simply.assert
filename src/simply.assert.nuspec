@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>simply.assert</id>
+    <version>$version$</version>
+    <title>simply::assert</title>
+    <description>A small C++ library for asserting in unit tests.</description>
+    <projectUrl>https://github.com/olegsych/simply.assert</projectUrl>
+    <licenseUrl>https://github.com/olegsych/simply.assert/blob/master/LICENSE</licenseUrl>
+    <authors>Oleg Sych</authors>
+    <copyright>© 2015 Oleg Sych</copyright>
+    <tags>C++ native</tags>
+  </metadata>
+  <files>
+    <file src="*.targets" target="build\native\" />
+    <file src="simply\**\*.h" target="build\native\simply\" />
+    <file src="simply\**\*.cpp" target="build\native\simply\" />
+  </files>
+</package>
+
