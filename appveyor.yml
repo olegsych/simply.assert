@@ -1,7 +1,7 @@
 # CI build definition for https://ci.appveyor.com/project/olegsych/simply-assert
 # To learn more, see http://www.appveyor.com/docs/appveyor-yml
 
-version: 0.1.0-build{build}
+version: 0.1.{build}
 
 branches:
   only:
@@ -26,6 +26,16 @@ after_test:
 
 artifacts:
 - path: bin\debug\*.nupkg
+
+deploy:
+- provider: NuGet
+  api_key:
+    secure: MllAarE5OQzLPrMNz2oSYIv2A197InquS37HPJ37FyFqrS7WQ1IroGaKol+LCBLG
+  skip_symbols: true
+- provider: GitHub
+  auth_token:
+    secure: f1COdRillJY6b2+I9IjOVzVhpCPe6MB8uzBo5g26o6of2GKRlsjPKbsyJ8oH2mbq
+  artifact: /.*\.nupkg/
 
 nuget:
   project_feed: true
