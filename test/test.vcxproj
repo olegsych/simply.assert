@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="stub.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="bool_test.cpp" />
@@ -170,6 +171,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="string_test.cpp" />
+    <ClCompile Include="stub.cpp" />
     <ClCompile Include="type_traits_test.cpp" />
   </ItemGroup>
   <ItemGroup>

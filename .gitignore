@@ -2,6 +2,7 @@
 *.*sdf
 *.user
 *.suo
+*.VC.opendb
 /ipch
 /.vs
 /packages

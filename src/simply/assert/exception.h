@@ -4,11 +4,12 @@
 #include <memory>
 #include <sstream>
 #include <simply/assert/fail.h>
+#include <simply/assert/framework.h>
 #include <simply/utility/type_name.h>
 
 namespace simply { namespace assert
 {
-    template<typename exception_t, typename functor_t>
+    template<typename exception_t, typename functor_t, typename framework = simply::assert::framework::default>
     std::unique_ptr<exception_t> throws(functor_t&& functor)
     {
         std::exception_ptr actual_exception;
@@ -41,7 +42,7 @@ namespace simply { namespace assert
             }
         }
 
-        fail(message);
+        fail<framework>(message.str());
         return std::unique_ptr<exception_t> { nullptr };
     }
 }}
