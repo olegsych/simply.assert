@@ -3,7 +3,7 @@
 #include <type_traits>
 #include <simply/assert/fail.h>
 #include <simply/assert/framework.h>
-#include <simply/utility/type_name.h>
+#include <simply/assert/implementation.h>
 
 namespace simply { namespace assert
 {
@@ -14,7 +14,7 @@ namespace simply { namespace assert
         {
             std::ostringstream message;
             message << "Expected abstract type\n";
-            message << "Actual concrete type: <" << utility::type_name<actual_t>() << ">";
+            message << "Actual concrete type: <" << implementation::type_name<actual_t>() << ">";
             fail<framework>(message.str());
         }
     }
@@ -25,8 +25,8 @@ namespace simply { namespace assert
         if (!std::is_base_of<base_t, actual_t>())
         {
             std::ostringstream message;
-            message << "Expected type derived from <" << utility::type_name<base_t>() << ">\n";
-            message << "Actual type <" << utility::type_name<actual_t>() << "> is not";
+            message << "Expected type derived from <" << implementation::type_name<base_t>() << ">\n";
+            message << "Actual type <" << implementation::type_name<actual_t>() << "> is not";
             fail<framework>(message.str());
         }
     }
@@ -38,7 +38,7 @@ namespace simply { namespace assert
         {
             std::ostringstream message;
             message << "Expected concrete type\n";
-            message << "Actual abstract type: <" << utility::type_name<actual_t>() << ">";
+            message << "Actual abstract type: <" << implementation::type_name<actual_t>() << ">";
             fail<framework>(message.str());
         }
     }
@@ -50,7 +50,7 @@ namespace simply { namespace assert
         {
             std::ostringstream message;
             message << "Expected copy-assignable type\n";
-            message << "Actual type: <" << utility::type_name<actual_t>() << "> is not";
+            message << "Actual type: <" << implementation::type_name<actual_t>() << "> is not";
             fail<framework>(message.str());
         }
     }
@@ -62,7 +62,7 @@ namespace simply { namespace assert
         {
             std::ostringstream message;
             message << "Expected copy-constructible type\n";
-            message << "Actual type: <" << utility::type_name<actual_t>() << "> is not";
+            message << "Actual type: <" << implementation::type_name<actual_t>() << "> is not";
             fail<framework>(message.str());
         }
     }
@@ -74,7 +74,7 @@ namespace simply { namespace assert
         {
             std::ostringstream message;
             message << "Expected destructible type\n";
-            message << "Actual type: <" << utility::type_name<actual_t>() << "> is not";
+            message << "Actual type: <" << implementation::type_name<actual_t>() << "> is not";
             fail<framework>(message.str());
         }
     }
@@ -85,8 +85,8 @@ namespace simply { namespace assert
         if (!std::is_same<expected_t, actual_t>())
         {
             std::ostringstream message;
-            message << "Expected type: <" << utility::type_name<expected_t>() << ">\n";
-            message << "Actual type: <" << utility::type_name<actual_t>() << ">";
+            message << "Expected type: <" << implementation::type_name<expected_t>() << ">\n";
+            message << "Actual type: <" << implementation::type_name<actual_t>() << ">";
             fail<framework>(message.str());
         }
     }

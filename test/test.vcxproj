@@ -48,23 +48,12 @@
     <ClCompile Include="equality_test.cpp" />
     <ClCompile Include="exception_test.cpp" />
     <ClCompile Include="fail_test.cpp" />
+    <ClCompile Include="implementation_test.cpp" />
     <ClCompile Include="null_test.cpp" />
     <ClCompile Include="string_test.cpp" />
     <ClCompile Include="stub.cpp" />
     <ClCompile Include="type_traits_test.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\src\simply.assert.targets" />
-  <ImportGroup Label="ExtensionTargets">
-    <Import Project="..\packages\simply.utility.0.1.0-build45\build\native\simply.utility.targets" Condition="Exists('..\packages\simply.utility.0.1.0-build45\build\native\simply.utility.targets')" />
-  </ImportGroup>
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\simply.utility.0.1.0-build45\build\native\simply.utility.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\simply.utility.0.1.0-build45\build\native\simply.utility.targets'))" />
-  </Target>
 </Project>

@@ -3,7 +3,7 @@
 #include <sstream>
 #include <simply/assert/fail.h>
 #include <simply/assert/framework.h>
-#include <simply/utility.h>
+#include <simply/assert/implementation.h>
 #include <type_traits>
 
 namespace simply { namespace assert
@@ -14,7 +14,7 @@ namespace simply { namespace assert
         if (pointer == nullptr)
         {
             std::ostringstream message;
-            message << "Expected non-null pointer of type <" << utility::type_name<t*>() << ">";
+            message << "Expected non-null pointer of type <" << implementation::type_name<t*>() << ">";
             fail<framework>(message.str());
         }
     }
@@ -37,7 +37,7 @@ namespace simply { namespace assert
         if (pointer != nullptr)
         {
             std::ostringstream message;
-            message << "Expected nullptr of type <" << utility::type_name<t*>() << ">\n";
+            message << "Expected nullptr of type <" << implementation::type_name<t*>() << ">\n";
             message << "Actual pointer <0x" << pointer << ">";
             try
             {

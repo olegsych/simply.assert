@@ -5,7 +5,7 @@
 #include <sstream>
 #include <simply/assert/fail.h>
 #include <simply/assert/framework.h>
-#include <simply/utility/type_name.h>
+#include <simply/assert/implementation.h>
 
 namespace simply { namespace assert
 {
@@ -28,7 +28,7 @@ namespace simply { namespace assert
         }
 
         std::ostringstream message;
-        message << "Expected exception of type: <" << utility::type_name<exception_t>() << ">";
+        message << "Expected exception of type: <" << implementation::type_name<exception_t>() << ">";
 
         if (actual_exception)
         {

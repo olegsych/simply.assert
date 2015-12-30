@@ -21,6 +21,7 @@
     <ClInclude Include="simply\assert\exception.h" />
     <ClInclude Include="simply\assert\fail.h" />
     <ClInclude Include="simply\assert\framework.h" />
+    <ClInclude Include="simply\assert\implementation.h" />
     <ClInclude Include="simply\assert\null.h" />
     <ClInclude Include="simply\assert\string.h" />
     <ClInclude Include="simply\assert\type_traits.h" />
