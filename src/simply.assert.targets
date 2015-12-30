@@ -5,10 +5,4 @@
       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory);$(VCInstallDir)UnitTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
-
-  <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)\simply\assert\implementation.cpp">
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-    </ClCompile>    
-  </ItemGroup>
 </Project>
