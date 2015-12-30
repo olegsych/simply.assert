@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include <CppUnitTest.h>
 #include <simply/assert/type_traits.h>
 #include "stub.h"

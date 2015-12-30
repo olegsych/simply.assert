@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include "stub.h"
 
 using namespace simply;
