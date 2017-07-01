@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -14,10 +14,10 @@
     <ProjectGuid>{2E430331-FF8E-42FE-8165-94062FCE970F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>test</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
     <LinkIncremental>true</LinkIncremental>
@@ -41,18 +41,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stub.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="bool_test.cpp" />
-    <ClCompile Include="equality_test.cpp" />
-    <ClCompile Include="exception_test.cpp" />
-    <ClCompile Include="fail_test.cpp" />
-    <ClCompile Include="implementation_test.cpp" />
-    <ClCompile Include="null_test.cpp" />
-    <ClCompile Include="string_test.cpp" />
-    <ClCompile Include="stub.cpp" />
-    <ClCompile Include="type_traits_test.cpp" />
+    <ClInclude Include="*.h" />
+    <ClCompile Include="*.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\src\simply.assert.targets" />

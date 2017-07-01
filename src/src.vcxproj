@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -15,25 +15,16 @@
     <None Include="simply.assert.targets" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="simply\assert.h" />
-    <ClInclude Include="simply\assert\bool.h" />
-    <ClInclude Include="simply\assert\equality.h" />
-    <ClInclude Include="simply\assert\exception.h" />
-    <ClInclude Include="simply\assert\fail.h" />
-    <ClInclude Include="simply\assert\framework.h" />
-    <ClInclude Include="simply\assert\implementation.h" />
-    <ClInclude Include="simply\assert\null.h" />
-    <ClInclude Include="simply\assert\string.h" />
-    <ClInclude Include="simply\assert\type_traits.h" />
+    <ClInclude Include ="**\*.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{328B3C35-755F-4326-A504-443D3A481710}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>src</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
