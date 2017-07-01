@@ -32,11 +32,11 @@ artifacts:
 deploy:
 - provider: NuGet
   api_key:
-    secure: MllAarE5OQzLPrMNz2oSYIv2A197InquS37HPJ37FyFqrS7WQ1IroGaKol+LCBLG
+    secure: 236NXQ/p6GSTraxqHTtmNVFcDJlTwDjwxzbdJIcDpk8Lu7hAkz1ThK6eqeVeTMz6
   skip_symbols: true
 - provider: GitHub
   auth_token:
-    secure: f1COdRillJY6b2+I9IjOVzVhpCPe6MB8uzBo5g26o6of2GKRlsjPKbsyJ8oH2mbq
+    secure: 0odiqbMNXJj+DNBK/pFP5to5mGxy1JfdSpA6dUA233dNgQitI78fjDm5vgmafgpR
   artifact: /.*\.nupkg/
 
 nuget:
