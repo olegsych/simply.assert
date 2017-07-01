@@ -41,18 +41,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="stub.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="bool_test.cpp" />
-    <ClCompile Include="equality_test.cpp" />
-    <ClCompile Include="exception_test.cpp" />
-    <ClCompile Include="fail_test.cpp" />
-    <ClCompile Include="implementation_test.cpp" />
-    <ClCompile Include="null_test.cpp" />
-    <ClCompile Include="string_test.cpp" />
-    <ClCompile Include="stub.cpp" />
-    <ClCompile Include="type_traits_test.cpp" />
+    <ClInclude Include="*.h" />
+    <ClCompile Include="*.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Import Project="..\src\simply.assert.targets" />
