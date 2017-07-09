@@ -43,6 +43,19 @@ namespace simply { namespace assert
         }
     }
 
+    template<typename from_t, typename to_t, typename framework = simply::assert::framework::default>
+    void is_convertible(bool expected = true)
+    {
+        if (expected != std::is_convertible<from_t, to_t>())
+        {
+            std::ostringstream message;
+            message << "Type <" << implementation::type_name<from_t>() << "> is ";
+            message << (expected ? "not " : "");
+            message << "convertible to type <" << implementation::type_name<to_t>() << ">";
+            fail<framework>(message.str());
+        }
+    }
+
     template<typename actual_t, typename framework = simply::assert::framework::default>
     void is_copy_assignable()
     {
