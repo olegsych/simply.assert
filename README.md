@@ -51,6 +51,7 @@ assert::is_not_equal("foo", "bar");
 assert::is_abstract<foo>();
 assert::is_base_of<foo, bar>();
 assert::is_concrete<foo>();
+assert::is_convertible<from, to>(bool expected = true);
 assert::is_copy_assignable<foo>();
 assert::is_copy_constructible<foo>();
 assert::is_destructible();

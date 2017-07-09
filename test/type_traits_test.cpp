@@ -121,6 +121,40 @@ namespace simply
 
         #pragma endregion
 
+        #pragma region is_convertible<from_t, to_t>()
+
+        TEST_METHOD(is_convertible_succeeds_when_source_type_is_convertible_to_target_type)
+        {
+            assert::is_convertible<char*, void*, stub>();
+
+            Assert::AreEqual<size_t>(0, stub::output.length(), stub::output.c_str());
+        }
+
+        TEST_METHOD(is_convertible_fails_when_source_type_is_not_convertible_to_target_type)
+        {
+            assert::is_convertible<void*, char*, stub>();
+
+            Assert::AreNotEqual(wstring::npos, stub::output.find(L"Type <void *"), stub::output.c_str());
+            Assert::AreNotEqual(wstring::npos, stub::output.find(L"is not convertible to type <char *"), stub::output.c_str());
+        }
+
+        TEST_METHOD(is_convertible_succeeds_when_source_type_is_not_convertible_to_target_type_and_expected_is_false)
+        {
+            assert::is_convertible<void*, char*, stub>(false);
+
+            Assert::AreEqual<size_t>(0, stub::output.length(), stub::output.c_str());
+        }
+
+        TEST_METHOD(is_convertible_fails_when_source_type_is_convertible_to_target_type_and_expected_is_false)
+        {
+            assert::is_convertible<char*, void*, stub>(false);
+
+            Assert::AreNotEqual(wstring::npos, stub::output.find(L"Type <char *"), stub::output.c_str());
+            Assert::AreNotEqual(wstring::npos, stub::output.find(L"is convertible to type <void *"), stub::output.c_str());
+        }
+
+        #pragma endregion
+
         #pragma region is_copy_assignable<actual_t>()
 
         TEST_METHOD(is_copy_assignable_fails_when_type_is_not_copy_assignable)
